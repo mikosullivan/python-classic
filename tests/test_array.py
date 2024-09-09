@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import classic
+from collections_classic import Array
 
 def test_array():
-    arr = classic.Array(['a', 'b', 'c'])
+    arr = Array(['a', 'b', 'c'])
     assert isinstance(arr, list)
-    assert isinstance(arr, classic.Array)
+    assert isinstance(arr, Array)
     assert len(arr) == 3
     assert arr[0] == 'a'
     assert arr[1] == 'b'
@@ -20,16 +20,16 @@ def test_array():
     assert arr.shift() == 'a'
     assert arr[0] == 'b'
 
-    arr = classic.Array()
+    arr = Array()
     arr.push('a')
     arr.push('b')
     arr.push('c')
-    arr = classic.Array(arr)
+    arr = Array(arr)
     assert arr[0] == 'a'
     assert arr[1] == 'b'
     assert arr[2] == 'c'
 
-    arr = classic.Array()
+    arr = Array()
     assert arr.shift() == None
 
 if __name__ == '__main__':
